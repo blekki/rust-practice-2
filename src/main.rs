@@ -9,7 +9,6 @@ fn solve_func_is_never_used() {
 }
 
 fn main() {
+    solve_func_is_never_used(); // solve the same named warnings
     println!("We learn Rust!");
-    
-    solve_func_is_never_used(); // solve the same named warning
 }
