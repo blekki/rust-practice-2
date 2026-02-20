@@ -5,6 +5,7 @@ fn solve_func_is_never_used() {
     if false {
         hackerrank::task0::simple_array_sum(&[]);
         hackerrank::task03::staircase(5);
+        hackerrank::task04::gradingStudents(&[]);
     }
 }
 
