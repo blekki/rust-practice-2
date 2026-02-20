@@ -8,19 +8,13 @@ pub fn gradingStudents(grades: &[i32]) -> Vec<i32> {
     let mut new_grades: Vec<i32> = Vec::new();
     
     for &rate in grades {
-        // if less then limit --> student hasn't possibility change grade
-        if rate < LOWER_LIMIT {
-            new_grades.push(rate);
-            continue;
-        }
-
         // round condition
         let difference: i32 = rate % 5;
-        if difference >= DIFFERENCE_LIMIT {
+        if difference >= DIFFERENCE_LIMIT && rate >= LOWER_LIMIT {
             new_grades.push(rate - difference + 5);
             continue;
         }
-
+        
         // default
         new_grades.push(rate);
     }
@@ -30,7 +24,7 @@ pub fn gradingStudents(grades: &[i32]) -> Vec<i32> {
 
 #[test]
 fn test_empty_containers() {
-        assert_eq!(gradingStudents(&[]), vec![]);
+    assert_eq!(gradingStudents(&[]), vec![]);
 }
 
 #[test]
