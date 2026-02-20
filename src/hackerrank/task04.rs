@@ -7,14 +7,7 @@ pub fn gradingStudents(grades: &[i32]) -> Vec<i32> {
 
     let mut new_grades: Vec<i32> = Vec::new();
     
-    // check is grades list empty
-    if grades.len() == 0 { return new_grades; }
-
-    // other logic
-    let students_count: i32 = grades[0];
-    for a in 1..=students_count {
-        let rate = grades[a as usize];
-
+    for &rate in grades {
         // if less then limit --> student hasn't possibility change grade
         if rate < LOWER_LIMIT {
             new_grades.push(rate);
@@ -38,25 +31,24 @@ pub fn gradingStudents(grades: &[i32]) -> Vec<i32> {
 #[test]
 fn test_empty_containers() {
         assert_eq!(gradingStudents(&[]), vec![]);
-        assert_eq!(gradingStudents(&[0]), vec![]);
 }
 
 #[test]
 fn test_full_containers() {
     {
-        let grades: [i32; 8] = [7, 43, 10, 88, 51, 90, 37, 100];
+        let grades: [i32; 7] = [43, 10, 88, 51, 90, 37, 100];
         let expect: Vec<i32> = vec![45, 10, 90, 51, 90, 37, 100];
         assert_eq!(gradingStudents(&grades), expect);
     }
 
     {
-        let grades: [i32; 5] = [4, 73, 67, 38, 33];
+        let grades: [i32; 4] = [73, 67, 38, 33];
         let expected: Vec<i32> = vec![75, 67, 40, 33];
         assert_eq!(gradingStudents(&grades), expected);
     }
 
     {
-        let grades: [i32; 6] = [5, 55, 56, 57, 58, 59];
+        let grades: [i32; 5] = [55, 56, 57, 58, 59];
         let expected: Vec<i32> = vec![55, 56, 57, 60, 60];
         assert_eq!(gradingStudents(&grades), expected);
     }
