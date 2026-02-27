@@ -6,6 +6,7 @@ fn solve_func_is_never_used() {
         hackerrank::task0::simple_array_sum(&[]);
         hackerrank::task03::staircase(5);
         hackerrank::task04::gradingStudents(&[]);
+        hackerrank::task05::countApplesAndOranges(0, 0, 0, 0, &[], &[]);
     }
 }
 
