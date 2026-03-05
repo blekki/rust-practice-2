@@ -11,6 +11,7 @@ fn solve_func_is_never_used() {
         hackerrank::task07::getTotalX(&[], &[]);
         hackerrank::task08::breakingRecords(&[]);
         hackerrank::task09::migratoryBirds(&[]);
+        hackerrank::task10::sockMerchant(0,&[]);
     }
 }
 
