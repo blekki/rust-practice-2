@@ -9,6 +9,7 @@ fn solve_func_is_never_used() {
         hackerrank::task05::countApplesAndOranges(0, 0, 0, 0, &[], &[]);
         hackerrank::task06::kangaroo(0, 6, 4, 2);
         hackerrank::task07::getTotalX(&[], &[]);
+        hackerrank::task08::breakingRecords(&[]);
     }
 }
 
