@@ -25,7 +25,7 @@ pub fn breakingRecords(scores: &[i32]) -> Vec<i32> {
 }
 
 #[test]
-fn test__() {
+fn test_breaking_records() {
     assert_eq!(breakingRecords(&[10, 5, 20, 20, 4, 5, 2, 25, 1]), vec![2, 4]);
     assert_eq!(breakingRecords(&[3, 4, 21, 36, 10, 28, 35, 5, 24, 42]), vec![4, 0]);
     assert_eq!(breakingRecords(&[10, 9, 8, 7, 6, 5]), vec![0, 5]);
