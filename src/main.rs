@@ -10,6 +10,7 @@ fn solve_func_is_never_used() {
         hackerrank::task06::kangaroo(0, 6, 4, 2);
         hackerrank::task07::getTotalX(&[], &[]);
         hackerrank::task08::breakingRecords(&[]);
+        hackerrank::task09::migratoryBirds(&[]);
     }
 }
 
